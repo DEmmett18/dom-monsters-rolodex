@@ -27,7 +27,7 @@ class App extends React.Component {
     this.setState({ searchValue: event.target.value, loading: true }, async () => {
       const value = this.state.searchValue;
       const regex = new RegExp(`^(${value.toLowerCase()})`);
-      const filteredMonsters = (await (await fetch('https://jsonplaceholder.typicode.com/users')).json()).filter(monster => {
+      const filteredMonsters = (await (await fetch('https://jsonplaceholder.typicode.com/users', { mode: 'cors' })).json()).filter(monster => {
         return monster.name.toLowerCase().match(regex);
       })
       this.setState({monsters: filteredMonsters, loading: false})
