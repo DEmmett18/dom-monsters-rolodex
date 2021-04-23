@@ -1,3 +1,6 @@
+body {
+  background-image: linear-gradient(to right, var(--aqua), var(--grape))
+}
 .App {
   text-align: center;
 }
@@ -35,4 +38,14 @@
   to {
     transform: rotate(180deg);
   }
+}
+
+.header-search {
+  width: fit-content;
+  margin: 10px auto;
+}
+h1 {
+  font-family: 'Bigelow Rules', cursive;
+  font-size: 105px;
+  margin: 10px auto;
 }
